@@ -268,8 +268,8 @@
           <EntitySetMapping Name="Authors">
             <EntityTypeMapping TypeName="PlutoModel.Author">
               <MappingFragment StoreEntitySet="Authors">
-                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
