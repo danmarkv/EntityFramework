@@ -1,18 +1,18 @@
-﻿namespace CodeFirstExistingDatabase.Migrations
+﻿namespace CodeFirstExercise.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CodeFirstExistingDatabase.PlutoContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CodeFirstExercise.VidzyContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CodeFirstExistingDatabase.PlutoContext context)
+        protected override void Seed(CodeFirstExercise.VidzyContext context)
         {
             //  This method will be called after migrating to the latest version.
 

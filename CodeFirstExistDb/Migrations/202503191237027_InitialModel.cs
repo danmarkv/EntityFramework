@@ -1,4 +1,4 @@
-﻿namespace CodeFirstExistingDatabase.Migrations
+﻿namespace CodeFirstExistDb.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

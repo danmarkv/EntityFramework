@@ -1,4 +1,4 @@
-namespace CodeFirstExistingDatabase
+namespace CodeFirstExistDb
 {
     using System;
     using System.Collections.Generic;

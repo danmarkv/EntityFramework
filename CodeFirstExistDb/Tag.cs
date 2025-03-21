@@ -1,4 +1,4 @@
-namespace CodeFirstExistingDatabase
+namespace CodeFirstExistDb
 {
     using System;
     using System.Collections.Generic;
@@ -6,30 +6,19 @@ namespace CodeFirstExistingDatabase
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Courses")]
-    public partial class Course
+    public partial class Tag
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Course()
+        public Tag()
         {
-            Tags = new HashSet<Tag>();
+            Courses = new HashSet<Course>();
         }
 
         public int Id { get; set; }
 
-        public string Title { get; set; }
-
-        public string Description { get; set; }
-
-        public int Level { get; set; }
-
-        public float FullPrice { get; set; }
-
-        public int? Author_Id { get; set; }
-
-        public virtual Author Author { get; set; }
+        public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tag> Tags { get; set; }
+        public virtual ICollection<Course> Courses { get; set; }
     }
 }

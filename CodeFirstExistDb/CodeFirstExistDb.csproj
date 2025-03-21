@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83CE100A-09A1-4C74-8631-5AE983B71F4D}</ProjectGuid>
+    <ProjectGuid>{08CE60ED-21C7-423A-A9CA-73D812549984}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CodeFirstExistingDatabase</RootNamespace>
-    <AssemblyName>CodeFirstExistingDatabase</AssemblyName>
+    <RootNamespace>CodeFirstExistDb</RootNamespace>
+    <AssemblyName>CodeFirstExistDb</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -56,10 +56,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs" />
+    <Compile Include="Migrations\202503191607206_AddNewCategoryTable.cs" />
+    <Compile Include="Migrations\202503191607206_AddNewCategoryTable.Designer.cs">
+      <DependentUpon>202503191607206_AddNewCategoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewCategory.cs" />
     <Compile Include="Course.cs" />
-    <Compile Include="Migrations\202503191056324_InitialModel.cs" />
-    <Compile Include="Migrations\202503191056324_InitialModel.Designer.cs">
-      <DependentUpon>202503191056324_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202503191237027_InitialModel.cs" />
+    <Compile Include="Migrations\202503191237027_InitialModel.Designer.cs">
+      <DependentUpon>202503191237027_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -72,8 +77,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202503191056324_InitialModel.resx">
-      <DependentUpon>202503191056324_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202503191237027_InitialModel.resx">
+      <DependentUpon>202503191237027_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202503191607206_AddNewCategoryTable.resx">
+      <DependentUpon>202503191607206_AddNewCategoryTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
